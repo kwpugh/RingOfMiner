@@ -1,0 +1,10 @@
+{
+	"item.ring_of_miner.ring_of_miner": "Anel do Mineiro",
+	
+	"item.ring_of_miner.ring_of_miner.line1": "Quebra a maioria dos blocos de §l§oVanila§r ao redor do jogador",
+	"item.ring_of_miner.ring_of_miner.line2": "Botão-direito para quebrar blocos",
+	"item.ring_of_miner.ring_of_miner.line3": "Esgueirar-se + Botão-direito para fazer os blocos desaparecerem",
+	"item.ring_of_miner.ring_of_miner.line4": "Área de efeito: 11x5x11",
+		
+	"itemGroup.ring_of_miner": "Ring of the Miner [Anel do Mineiro]"
+}

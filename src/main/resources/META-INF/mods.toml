@@ -1,0 +1,33 @@
+modLoader="javafml" #mandatory
+
+loaderVersion="[33,)" #mandatory (24 is current forge version)
+
+credits="Thanks to Udemy for great Java courses." #optional
+
+authors="kwpugh" #optional
+license="MIT"
+
+[[mods]] #mandatory
+modId="ring_of_miner" #mandatory
+version="1.2.1" #mandatory
+displayName="Ring of Miner" #mandatory
+description='''
+A simple ring that breaks blocks around the player
+'''
+
+
+[[dependencies.ring_of_miner]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[33,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+
+
+# Here's another dependency
+[[dependencies.ring_of_miner]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.2]"
+    ordering="NONE"
+    side="BOTH"
