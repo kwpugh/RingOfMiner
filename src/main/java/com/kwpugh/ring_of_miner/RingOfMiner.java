@@ -60,7 +60,7 @@ public class RingOfMiner
                 map(m->m.getMessageSupplier().get()).
                 collect(Collectors.toList()));
     }
-
+ 
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event)
     {
