@@ -65,7 +65,7 @@ public class ItemRingMiner extends Item
 					{
 						for (int z = -5; z <= 5; z++)
 						{
-							BlockPos pos = player.func_233580_cy_().add(x, y, z);
+							BlockPos pos = player.getPosition().add(x, y, z);
 							block = world.getBlockState(pos).getBlock();
 							String blockForgeTags = block.getTags().toString();
 
@@ -110,7 +110,7 @@ public class ItemRingMiner extends Item
 									block == Blocks.END_STONE ||
 									block == Blocks.NETHERRACK)
 							{
-								poslist.add(player.func_233580_cy_().add(x, y, z));
+								poslist.add(player.getPosition().add(x, y, z));
 							}
 						}
 					}
@@ -186,32 +186,32 @@ public class ItemRingMiner extends Item
 		String mode;
 
 		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.ring_of_miner.ring_of_miner.line1").func_240699_a_(TextFormatting.GREEN)));
+		tooltip.add((new TranslationTextComponent("item.ring_of_miner.ring_of_miner.line1").mergeStyle(TextFormatting.GREEN)));
 
 		if(reverseRingMiner)
 		{
-			tooltip.add((new TranslationTextComponent("item.ring_of_miner.ring_of_miner.line5").func_240699_a_(TextFormatting.YELLOW)));
-			tooltip.add((new TranslationTextComponent("item.ring_of_miner.ring_of_miner.line6").func_240699_a_(TextFormatting.YELLOW)));
+			tooltip.add((new TranslationTextComponent("item.ring_of_miner.ring_of_miner.line5").mergeStyle(TextFormatting.YELLOW)));
+			tooltip.add((new TranslationTextComponent("item.ring_of_miner.ring_of_miner.line6").mergeStyle(TextFormatting.YELLOW)));
 		}
 		else
 		{
-			tooltip.add((new TranslationTextComponent("item.ring_of_miner.ring_of_miner.line2").func_240699_a_(TextFormatting.YELLOW)));
-			tooltip.add((new TranslationTextComponent("item.ring_of_miner.ring_of_miner.line3").func_240699_a_(TextFormatting.YELLOW)));
+			tooltip.add((new TranslationTextComponent("item.ring_of_miner.ring_of_miner.line2").mergeStyle(TextFormatting.YELLOW)));
+			tooltip.add((new TranslationTextComponent("item.ring_of_miner.ring_of_miner.line3").mergeStyle(TextFormatting.YELLOW)));
 		}
 
 
-		tooltip.add((new TranslationTextComponent("item.ring_of_miner.ring_of_miner.line4").func_240699_a_(TextFormatting.LIGHT_PURPLE)));
-		tooltip.add((new TranslationTextComponent("item.ring_of_miner.ring_of_miner.cooldown",ringMinerCooldown).func_240699_a_(TextFormatting.LIGHT_PURPLE)));
+		tooltip.add((new TranslationTextComponent("item.ring_of_miner.ring_of_miner.line4").mergeStyle(TextFormatting.LIGHT_PURPLE)));
+		tooltip.add((new TranslationTextComponent("item.ring_of_miner.ring_of_miner.cooldown",ringMinerCooldown).mergeStyle(TextFormatting.LIGHT_PURPLE)));
 
 		if(delayedBreakMode)
 		{
 			mode = "Delayed";
-			tooltip.add((new TranslationTextComponent("item.ring_of_miner.ring_of_miner.mode", mode).func_240699_a_(TextFormatting.LIGHT_PURPLE)));
+			tooltip.add((new TranslationTextComponent("item.ring_of_miner.ring_of_miner.mode", mode).mergeStyle(TextFormatting.LIGHT_PURPLE)));
 		}
 		else
 		{
 			mode = "Instant";
-			tooltip.add((new TranslationTextComponent("item.ring_of_miner.ring_of_miner.mode", mode).func_240699_a_(TextFormatting.LIGHT_PURPLE)));
+			tooltip.add((new TranslationTextComponent("item.ring_of_miner.ring_of_miner.mode", mode).mergeStyle(TextFormatting.LIGHT_PURPLE)));
 		}
 	}
 }
