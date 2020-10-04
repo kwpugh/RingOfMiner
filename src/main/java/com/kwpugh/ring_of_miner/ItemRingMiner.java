@@ -91,8 +91,8 @@ public class ItemRingMiner extends Item
 									block == Blocks.GRANITE ||
 									block == Blocks.ANDESITE ||
 									block == Blocks.DIORITE  ||
-									block == Blocks.DIORITE ||
 									block == Blocks.SOUL_SAND ||
+									block == Blocks.SOUL_SOIL ||
 									block == Blocks.MOSSY_COBBLESTONE ||
 									block == Blocks.MOSSY_COBBLESTONE_SLAB ||
 									block == Blocks.MOSSY_COBBLESTONE_STAIRS ||
@@ -108,6 +108,9 @@ public class ItemRingMiner extends Item
 									block == Blocks.INFESTED_COBBLESTONE ||
 									block == Blocks.INFESTED_MOSSY_STONE_BRICKS ||
 									block == Blocks.END_STONE ||
+									block == Blocks.BASALT ||
+									block == Blocks.BLACKSTONE ||
+									block == Blocks.MAGMA_BLOCK ||
 									block == Blocks.NETHERRACK)
 							{
 								poslist.add(player.getPosition().add(x, y, z));
