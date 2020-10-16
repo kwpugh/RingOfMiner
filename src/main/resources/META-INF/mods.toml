@@ -9,7 +9,7 @@ license="MIT"
 
 [[mods]] #mandatory
 modId="ring_of_miner" #mandatory
-version="1.2.2" #mandatory
+version="1.2.5" #mandatory
 displayName="Ring of Miner" #mandatory
 description='''
 A simple ring that breaks blocks around the player
