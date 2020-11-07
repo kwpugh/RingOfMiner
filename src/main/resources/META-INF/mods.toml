@@ -9,7 +9,7 @@ license="MIT"
 
 [[mods]] #mandatory
 modId="ring_of_miner" #mandatory
-version="1.2.5" #mandatory
+version="1.2.6" #mandatory
 displayName="Ring of Miner" #mandatory
 description='''
 A simple ring that breaks blocks around the player
@@ -28,6 +28,6 @@ A simple ring that breaks blocks around the player
 [[dependencies.ring_of_miner]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.3]"
+    versionRange="[1.16.3, 1.16.4]"
     ordering="NONE"
     side="BOTH"
