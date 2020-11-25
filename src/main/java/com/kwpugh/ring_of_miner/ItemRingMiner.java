@@ -2,6 +2,8 @@ package com.kwpugh.ring_of_miner;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import javax.annotation.Nullable;
 
@@ -128,6 +130,7 @@ public class ItemRingMiner extends Item
 					//Test code for block break delay
 					if (!poslist.isEmpty())
 					{
+						List<BlockPos> reversedPosList = reverseList(poslist);
 						MinecraftForge.EVENT_BUS.register(new Object()
 			            {
 			                int delay = BREAK_DELAY;
@@ -138,9 +141,9 @@ public class ItemRingMiner extends Item
 			                {
 			                    if (delay-- > 0) return;
 			                    delay = BREAK_DELAY;
-			                    if (i < poslist.size())
+			                    if (i < reversedPosList.size())
 			                    {
-			                        BlockPos breakPos = poslist.get(i);
+			                        BlockPos breakPos = reversedPosList.get(i);
 			                    	if(shiftKeyPressed)    //NOTE: shift key needs to be held down through the delayed block breaking to get drops
 									{
 										world.destroyBlock(breakPos, !reverseRingMiner);
@@ -186,6 +189,13 @@ public class ItemRingMiner extends Item
         return new ActionResult<ItemStack>(ActionResultType.SUCCESS, stack);
 	}
 
+	public static <T> List<T> reverseList(List<T> list)
+	{
+	    return IntStream.range(0, list.size())
+	                   .mapToObj(i -> list.get(list.size() - 1 - i))
+	                   .collect(Collectors.toCollection(ArrayList::new));
+	}
+	
 	@OnlyIn(Dist.CLIENT)
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
