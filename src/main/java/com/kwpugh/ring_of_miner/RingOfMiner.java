@@ -28,9 +28,7 @@ public class RingOfMiner
     public RingOfMiner()
     {
     	ModConfig.loadConfig(ModConfig.CONFIG, FMLPaths.CONFIGDIR.get().resolve("ring-of-miner-general.toml"));
-
     	ItemInit.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
-
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
